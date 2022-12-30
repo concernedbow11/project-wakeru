@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "177867397436",
+    "project_id": "wakeru-14842",
+    "storage_bucket": "wakeru-14842.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177867397436:android:b95c3ae7fbff5675af2639",
+        "android_client_info": {
+          "package_name": "com.flutterflow.finwallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177867397436-mqn2qu0j3h2cgdviuu38993h27fqsrhf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJxv-u-AqzzW7PMiHYkjOSzNLyJVD-A-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177867397436-mqn2qu0j3h2cgdviuu38993h27fqsrhf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "177867397436-k88dc2elr2qtnj4elih2rsv0decgen8o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.finwallet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
