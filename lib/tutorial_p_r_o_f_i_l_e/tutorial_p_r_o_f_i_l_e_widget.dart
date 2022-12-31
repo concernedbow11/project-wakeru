@@ -64,11 +64,13 @@ class _TutorialPROFILEWidgetState extends State<TutorialPROFILEWidget> {
                       fit: BoxFit.fitWidth,
                     ),
                   if (!(Theme.of(context).brightness == Brightness.dark))
-                    Image.asset(
-                      'assets/images/finWallet_logo_landscapeDark@3x.png',
-                      width: 170,
-                      height: 60,
-                      fit: BoxFit.fitWidth,
+                    Expanded(
+                      child: Image.asset(
+                        'assets/images/wakeru_bg.png',
+                        width: 170,
+                        height: 60,
+                        fit: BoxFit.fitWidth,
+                      ),
                     ),
                 ],
               ),

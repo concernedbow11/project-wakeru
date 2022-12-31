@@ -1,10 +1,13 @@
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../rewards/rewards_widget.dart';
+import '../transfer_funds/transfer_funds_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageAlt1Widget extends StatefulWidget {
@@ -118,7 +121,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                 shape: BoxShape.circle,
                               ),
                               child: Image.asset(
-                                'assets/images/avatar.png',
+                                'assets/images/memoji.png',
                               ),
                             ),
                           ),
@@ -146,7 +149,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                     EdgeInsetsDirectional.fromSTEB(4, 0, 0, 0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    'izgc0c6r' /* Andrew */,
+                                    'izgc0c6r' /* User */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .title3
@@ -246,7 +249,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    'syy689nt' /* $7,630 */,
+                                    'syy689nt' /* £7,630 */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .title1
@@ -344,99 +347,88 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
-                              width: 110,
+                              width: 184.7,
                               height: 100,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
                                 borderRadius: BorderRadius.circular(8),
                               ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.swap_horiz_rounded,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    size: 40,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 8, 0, 0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'rfozud9v' /* Transfer */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1,
+                              child: InkWell(
+                                onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          TransferFundsWidget(),
                                     ),
-                                  ),
-                                ],
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.swap_horiz_rounded,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 40,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 8, 0, 0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'rfozud9v' /* Repayments */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                             Container(
-                              width: 110,
+                              width: 174,
                               height: 100,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
                                 borderRadius: BorderRadius.circular(8),
                               ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.stacked_line_chart_rounded,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    size: 40,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 8, 0, 0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'pcrarg0a' /* Activity */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1,
+                              child: InkWell(
+                                onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => RewardsWidget(),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: 110,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.account_balance_outlined,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    size: 40,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 8, 0, 0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'zmjsfzgg' /* My Bank */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1,
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    FaIcon(
+                                      FontAwesomeIcons.gift,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 36,
                                     ),
-                                  ),
-                                ],
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 8, 0, 0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'zmjsfzgg' /* My Rewards */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -502,7 +494,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                     children: [
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          'g7t9krj7' /* Go Far Rewards */,
+                                          'g7t9krj7' /* Wakeru Rewards */,
                                         ),
                                         style:
                                             FlutterFlowTheme.of(context).title3,
@@ -512,7 +504,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                             0, 4, 0, 0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'vupu5y5p' /* Income */,
+                                            'vupu5y5p' /* Cashback */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1,
@@ -532,7 +524,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                   children: [
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'bj5qnrj5' /* $50.00 */,
+                                        'bj5qnrj5' /* +£5.25 */,
                                       ),
                                       textAlign: TextAlign.end,
                                       style: FlutterFlowTheme.of(context)
@@ -548,7 +540,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                           0, 4, 0, 0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          'd1n5mbq7' /* Hello World */,
+                                          'd1n5mbq7' /* Rewards */,
                                         ),
                                         textAlign: TextAlign.end,
                                         style: FlutterFlowTheme.of(context)
@@ -612,7 +604,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                     children: [
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '2thn73jc' /* Go Far Rewards */,
+                                          '2thn73jc' /* Sainsbury's */,
                                         ),
                                         style:
                                             FlutterFlowTheme.of(context).title3,
@@ -622,7 +614,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                             0, 4, 0, 0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            '1fjdiibo' /* Income */,
+                                            '1fjdiibo' /* Payment */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1,
@@ -642,7 +634,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                   children: [
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'ld7s2fpn' /* $50.00 */,
+                                        'ld7s2fpn' /* -£2.00 */,
                                       ),
                                       textAlign: TextAlign.end,
                                       style: FlutterFlowTheme.of(context)
@@ -658,7 +650,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                           0, 4, 0, 0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          'ft8bu1we' /* Hello World */,
+                                          'ft8bu1we' /* Visa Card */,
                                         ),
                                         textAlign: TextAlign.end,
                                         style: FlutterFlowTheme.of(context)
@@ -722,7 +714,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                     children: [
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '8t6ddwco' /* Go Far Rewards */,
+                                          '8t6ddwco' /* Argos */,
                                         ),
                                         style:
                                             FlutterFlowTheme.of(context).title3,
@@ -732,7 +724,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                             0, 4, 0, 0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'td15kjsa' /* Income */,
+                                            'td15kjsa' /* Payment */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1,
@@ -752,7 +744,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                   children: [
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'qmjqp9a6' /* $50.00 */,
+                                        'qmjqp9a6' /* -£50.00 */,
                                       ),
                                       textAlign: TextAlign.end,
                                       style: FlutterFlowTheme.of(context)
@@ -768,7 +760,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                           0, 4, 0, 0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '9qc797et' /* Hello World */,
+                                          '9qc797et' /* Contactless */,
                                         ),
                                         textAlign: TextAlign.end,
                                         style: FlutterFlowTheme.of(context)
@@ -832,7 +824,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                     children: [
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '8pdmehj2' /* Go Far Rewards */,
+                                          '8pdmehj2' /* Amazon */,
                                         ),
                                         style:
                                             FlutterFlowTheme.of(context).title3,
@@ -842,7 +834,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                             0, 4, 0, 0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'krrhjgc4' /* Income */,
+                                            'krrhjgc4' /* Payment */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1,
@@ -862,7 +854,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                   children: [
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        '53m2u0s2' /* $50.00 */,
+                                        '53m2u0s2' /* -£26.35 */,
                                       ),
                                       textAlign: TextAlign.end,
                                       style: FlutterFlowTheme.of(context)
@@ -878,7 +870,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                           0, 4, 0, 0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          'aks5zz4f' /* Hello World */,
+                                          'aks5zz4f' /* Visa Card */,
                                         ),
                                         textAlign: TextAlign.end,
                                         style: FlutterFlowTheme.of(context)
