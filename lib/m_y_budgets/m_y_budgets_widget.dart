@@ -143,7 +143,7 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
         automaticallyImplyLeading: false,
         title: Text(
           FFLocalizations.of(context).getText(
-            'cd0zp71n' /* My Budget */,
+            'cd0zp71n' /* My Money */,
           ),
           style: FlutterFlowTheme.of(context).title1,
         ),
@@ -191,7 +191,7 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    'hfwbiivj' /* Income */,
+                                    'hfwbiivj' /* Left to pay */,
                                   ),
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context).bodyText2,
@@ -201,7 +201,7 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
                                       0, 8, 0, 12),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'jjj3ydb1' /* +$12,402 */,
+                                      'jjj3ydb1' /* -£12,402 */,
                                     ),
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)
@@ -288,7 +288,7 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
                                       0, 8, 0, 12),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'a5zzlh8f' /* -$8,392 */,
+                                      'a5zzlh8f' /* -£8,392 */,
                                     ),
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)
@@ -445,12 +445,15 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
                                         ),
                                       ),
                                       Text(
-                                        formatNumber(
-                                          listViewBudgetsRecord
-                                              .budgetAmountNumber!,
-                                          formatType: FormatType.decimal,
-                                          decimalType: DecimalType.automatic,
-                                          currency: '\$',
+                                        valueOrDefault<String>(
+                                          formatNumber(
+                                            listViewBudgetsRecord
+                                                .budgetAmountNumber,
+                                            formatType: FormatType.decimal,
+                                            decimalType: DecimalType.automatic,
+                                            currency: '£',
+                                          ),
+                                          '1234.56',
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .title1
@@ -519,9 +522,9 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
                                                           FormatType.decimal,
                                                       decimalType: DecimalType
                                                           .periodDecimal,
-                                                      currency: '',
+                                                      currency: '£',
                                                     ),
-                                                    '\$22,000',
+                                                    '22,000',
                                                   ),
                                                   textAlign: TextAlign.end,
                                                   style: FlutterFlowTheme.of(

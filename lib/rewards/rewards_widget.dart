@@ -1,8 +1,7 @@
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../m_y_card/m_y_card_widget.dart';
-import '../transfer_funds/transfer_funds_widget.dart';
+import '../m_y_profile_page/m_y_profile_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -10,14 +9,14 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
-class ProfilepageWidget extends StatefulWidget {
-  const ProfilepageWidget({Key? key}) : super(key: key);
+class RewardsWidget extends StatefulWidget {
+  const RewardsWidget({Key? key}) : super(key: key);
 
   @override
-  _ProfilepageWidgetState createState() => _ProfilepageWidgetState();
+  _RewardsWidgetState createState() => _RewardsWidgetState();
 }
 
-class _ProfilepageWidgetState extends State<ProfilepageWidget>
+class _RewardsWidgetState extends State<RewardsWidget>
     with TickerProviderStateMixin {
   final animationsMap = {
     'containerOnPageLoadAnimation1': AnimationInfo(
@@ -117,28 +116,42 @@ class _ProfilepageWidgetState extends State<ProfilepageWidget>
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        'hhb6veym' /* Wallet Balance */,
+                        'hhb6veym' /* Rewards */,
                       ),
-                      style: FlutterFlowTheme.of(context).subtitle1,
-                    ),
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      elevation: 2,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(2, 2, 2, 2),
-                        child: Container(
-                          width: 40,
-                          height: 40,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
+                      style: FlutterFlowTheme.of(context).title3.override(
+                            fontFamily: 'Lexend',
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
                           ),
-                          child: Image.network(
-                            'https://picsum.photos/seed/750/600',
+                    ),
+                    InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MYProfilePageWidget(),
+                          ),
+                        );
+                      },
+                      child: Card(
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(40),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(2, 2, 2, 2),
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.asset(
+                              'assets/images/memoji.png',
+                            ),
                           ),
                         ),
                       ),
@@ -154,217 +167,19 @@ class _ProfilepageWidgetState extends State<ProfilepageWidget>
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        'fgf8icmv' /* $23,000 */,
+                        'fgf8icmv' /* £21,906 */,
                       ),
                       style: FlutterFlowTheme.of(context).title1.override(
                             fontFamily: 'Lexend',
-                            fontSize: 36,
-                            fontWeight: FontWeight.w300,
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
                           ),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16, 4, 16, 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      FFLocalizations.of(context).getText(
-                        '2rrr446m' /* 3 currencies */,
-                      ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Lexend',
-                            color: FlutterFlowTheme.of(context).tertiaryColor,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16, 16, 16, 16),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 4, 0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.24,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).darkBackground,
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 0, 12),
-                                  child: Icon(
-                                    Icons.account_balance_outlined,
-                                    color:
-                                        FlutterFlowTheme.of(context).textColor,
-                                    size: 36,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 4, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'r04m9nxs' /* My Bank */,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.getFont(
-                                      'Lexend Deca',
-                                      color: FlutterFlowTheme.of(context)
-                                          .textColor,
-                                      fontSize: 12,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(4, 0, 4, 0),
-                        child: InkWell(
-                          onTap: () async {
-                            await Navigator.push(
-                              context,
-                              PageTransition(
-                                type: PageTransitionType.bottomToTop,
-                                duration: Duration(milliseconds: 220),
-                                reverseDuration: Duration(milliseconds: 220),
-                                child: TransferFundsWidget(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.24,
-                            decoration: BoxDecoration(
-                              color:
-                                  FlutterFlowTheme.of(context).darkBackground,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12, 12, 12, 12),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 12),
-                                    child: Icon(
-                                      Icons.swap_horiz_outlined,
-                                      color: FlutterFlowTheme.of(context)
-                                          .textColor,
-                                      size: 36,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 4, 0, 0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '8nac51xz' /* Transfer */,
-                                      ),
-                                      style: GoogleFonts.getFont(
-                                        'Lexend Deca',
-                                        color: FlutterFlowTheme.of(context)
-                                            .textColor,
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(4, 0, 0, 0),
-                        child: InkWell(
-                          onTap: () async {
-                            await Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MYCardWidget(),
-                              ),
-                              (r) => false,
-                            );
-                          },
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.24,
-                            decoration: BoxDecoration(
-                              color:
-                                  FlutterFlowTheme.of(context).darkBackground,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12, 12, 12, 12),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 12),
-                                    child: Icon(
-                                      Icons.stacked_line_chart_rounded,
-                                      color: FlutterFlowTheme.of(context)
-                                          .textColor,
-                                      size: 36,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 4, 0, 0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        's56t3xya' /* Activity */,
-                                      ),
-                                      style: GoogleFonts.getFont(
-                                        'Lexend Deca',
-                                        color: FlutterFlowTheme.of(context)
-                                            .textColor,
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 12),
+                padding: EdgeInsetsDirectional.fromSTEB(16, 50, 16, 12),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -387,7 +202,7 @@ class _ProfilepageWidgetState extends State<ProfilepageWidget>
                       children: [
                         Text(
                           FFLocalizations.of(context).getText(
-                            'vewa5op5' /* Bitcoin */,
+                            'vewa5op5' /* March */,
                           ),
                           style: FlutterFlowTheme.of(context).title3,
                         ),
@@ -404,17 +219,6 @@ class _ProfilepageWidgetState extends State<ProfilepageWidget>
                                 ),
                                 style: FlutterFlowTheme.of(context).title1,
                               ),
-                            ),
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                'yla7uncg' /* 32% of portfolio */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Lexend',
-                                    color: Color(0x7DEEEEEE),
-                                  ),
                             ),
                           ],
                         ),
@@ -480,7 +284,7 @@ class _ProfilepageWidgetState extends State<ProfilepageWidget>
                       children: [
                         Text(
                           FFLocalizations.of(context).getText(
-                            'opob20j8' /* Solona */,
+                            'opob20j8' /* February */,
                           ),
                           style: FlutterFlowTheme.of(context).title3,
                         ),
@@ -497,17 +301,6 @@ class _ProfilepageWidgetState extends State<ProfilepageWidget>
                                 ),
                                 style: FlutterFlowTheme.of(context).title1,
                               ),
-                            ),
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                '606emxw1' /* 40% of portfolio */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Lexend',
-                                    color: Color(0x7DEEEEEE),
-                                  ),
                             ),
                           ],
                         ),
@@ -573,7 +366,7 @@ class _ProfilepageWidgetState extends State<ProfilepageWidget>
                       children: [
                         Text(
                           FFLocalizations.of(context).getText(
-                            'l2io5lul' /* Dogecoin */,
+                            'l2io5lul' /* January */,
                           ),
                           style: FlutterFlowTheme.of(context).title3,
                         ),
@@ -590,17 +383,6 @@ class _ProfilepageWidgetState extends State<ProfilepageWidget>
                                 ),
                                 style: FlutterFlowTheme.of(context).title1,
                               ),
-                            ),
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                '4mvfe3pe' /* 40% of portfolio */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Lexend',
-                                    color: Color(0x7DEEEEEE),
-                                  ),
                             ),
                           ],
                         ),

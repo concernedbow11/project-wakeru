@@ -91,13 +91,10 @@ class _MyAppState extends State<MyApp> {
       home: initialUser == null || displaySplashImage
           ? Builder(
               builder: (context) => Container(
-                color: Colors.transparent,
-                child: Center(
-                  child: Image.asset(
-                    'assets/images/Medical_ScheduleApp_0.0.png',
-                    width: MediaQuery.of(context).size.width,
-                    fit: BoxFit.fitWidth,
-                  ),
+                color: FlutterFlowTheme.of(context).secondaryBackground,
+                child: Image.asset(
+                  'assets/images/wakeru.png',
+                  fit: BoxFit.contain,
                 ),
               ),
             )

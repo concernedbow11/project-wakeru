@@ -151,7 +151,7 @@ class _BudgetDetailsWidgetState extends State<BudgetDetailsWidget> {
                                         .budgetAmountNumber!,
                                     formatType: FormatType.decimal,
                                     decimalType: DecimalType.automatic,
-                                    currency: '\$',
+                                    currency: '£',
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .title1
@@ -222,7 +222,7 @@ class _BudgetDetailsWidgetState extends State<BudgetDetailsWidget> {
                                             .budgetSpentNumber,
                                         formatType: FormatType.decimal,
                                         decimalType: DecimalType.automatic,
-                                        currency: '\$',
+                                        currency: '£',
                                       ),
                                       '2,502',
                                     ),
@@ -400,14 +400,7 @@ class _BudgetDetailsWidgetState extends State<BudgetDetailsWidget> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            PaymentDetailsWidget(
-                                          transactionDetails:
-                                              transactionListTransactionsRecord
-                                                  .reference,
-                                          userSpent:
-                                              transactionListTransactionsRecord
-                                                  .user,
-                                        ),
+                                            PaymentDetailsWidget(),
                                       ),
                                     );
                                   },

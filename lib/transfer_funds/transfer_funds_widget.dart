@@ -10,6 +10,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:local_auth/local_auth.dart';
 
 class TransferFundsWidget extends StatefulWidget {
   const TransferFundsWidget({Key? key}) : super(key: key);
@@ -151,33 +152,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
         ),
       ],
     ),
-    'rowOnPageLoadAnimation1': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 270.ms,
-          duration: 600.ms,
-          begin: 0,
-          end: 1,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 270.ms,
-          duration: 600.ms,
-          begin: Offset(0, 82),
-          end: Offset(0, 0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 270.ms,
-          duration: 600.ms,
-          begin: 1,
-          end: 1,
-        ),
-      ],
-    ),
-    'rowOnPageLoadAnimation2': AnimationInfo(
+    'rowOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
@@ -219,11 +194,27 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
   String? dropDownValue1;
   String? dropDownValue2;
   TextEditingController? textController;
+  bool verifiedPayment = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      final _localAuth = LocalAuthentication();
+      bool _isBiometricSupported = await _localAuth.isDeviceSupported();
+
+      if (_isBiometricSupported) {
+        verifiedPayment = await _localAuth.authenticate(
+            localizedReason: FFLocalizations.of(context).getText(
+          'xn98j568' /* Please authenticate before sen... */,
+        ));
+        setState(() {});
+      }
+    });
+
+    textController = TextEditingController();
     setupAnimations(
       animationsMap.values.where((anim) =>
           anim.trigger == AnimationTrigger.onActionTrigger ||
@@ -231,7 +222,11 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
       this,
     );
 
-    textController = TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
+          textController?.text = FFLocalizations.of(context).getText(
+            'b96e056y' /* £7,630 */,
+          );
+        }));
   }
 
   @override
@@ -285,7 +280,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                       children: [
                         Text(
                           FFLocalizations.of(context).getText(
-                            'pe3o18oh' /* Transfer Funds */,
+                            'pe3o18oh' /* Repayment */,
                           ),
                           style: FlutterFlowTheme.of(context).title1,
                         ),
@@ -363,7 +358,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                                 children: [
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      'zq4ozx20' /* $7,630 */,
+                                      'zq4ozx20' /* £7,630 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .title1
@@ -480,16 +475,16 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                       child: FlutterFlowDropDown<String>(
                         options: [
                           FFLocalizations.of(context).getText(
-                            'fddma8xl' /* Select Account */,
+                            'fddma8xl' /* Full amount */,
                           ),
                           FFLocalizations.of(context).getText(
-                            '23l6kqgm' /* Account ****2010 */,
+                            '23l6kqgm' /* 3 months */,
                           ),
                           FFLocalizations.of(context).getText(
-                            '3hwdfadf' /* Account ****2011 */,
+                            '3hwdfadf' /* 6 months */,
                           ),
                           FFLocalizations.of(context).getText(
-                            'xvj00xg1' /* Account ****2012 */,
+                            'xvj00xg1' /* 9 months */,
                           )
                         ],
                         onChanged: (val) =>
@@ -498,7 +493,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                         height: 60,
                         textStyle: FlutterFlowTheme.of(context).bodyText1,
                         hintText: FFLocalizations.of(context).getText(
-                          'ok5xluvk' /* Choose an Account */,
+                          'ok5xluvk' /* Choose payment split */,
                         ),
                         icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
@@ -567,29 +562,6 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                       ).animateOnPageLoad(
                           animationsMap['textFieldOnPageLoadAnimation']!),
                     ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 16),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'wngoi0v4' /* Your new account balance is: */,
-                            ),
-                            style: FlutterFlowTheme.of(context).bodyText2,
-                          ),
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'g6bfec2g' /* $7,630 */,
-                            ),
-                            textAlign: TextAlign.end,
-                            style: FlutterFlowTheme.of(context).title3,
-                          ),
-                        ],
-                      ).animateOnPageLoad(
-                          animationsMap['rowOnPageLoadAnimation1']!),
-                    ),
                   ],
                 ),
               ),
@@ -617,7 +589,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                         );
                       },
                       text: FFLocalizations.of(context).getText(
-                        'xaw2jdst' /* Send Transfer */,
+                        'xaw2jdst' /* Send Payment */,
                       ),
                       options: FFButtonOptions(
                         width: 300,
@@ -638,7 +610,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                   ],
                 ),
               ],
-            ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation2']!),
+            ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation']!),
           ),
           Text(
             FFLocalizations.of(context).getText(
