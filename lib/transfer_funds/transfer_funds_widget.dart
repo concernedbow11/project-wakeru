@@ -208,7 +208,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
       if (_isBiometricSupported) {
         verifiedPayment = await _localAuth.authenticate(
             localizedReason: FFLocalizations.of(context).getText(
-          '2m9cn5ie' /* Please authenticate before sen... */,
+          'xn98j568' /* Please authenticate before sen... */,
         ));
         setState(() {});
       }
@@ -224,7 +224,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
           textController?.text = FFLocalizations.of(context).getText(
-            'kss3mp4o' /* £7,630 */,
+            'b96e056y' /* £7,630 */,
           );
         }));
   }

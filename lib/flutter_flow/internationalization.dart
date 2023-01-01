@@ -1293,7 +1293,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': '\$ Betrag',
       'es': '\$ Monto',
     },
-    'kss3mp4o': {
+    'b96e056y': {
       'en': '£7,630',
       'ar': '',
       'de': '',
@@ -1317,7 +1317,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Heim',
       'es': 'Casa',
     },
-    '2m9cn5ie': {
+    'xn98j568': {
       'en': 'Please authenticate before sending payment',
       'ar': '',
       'de': '',
