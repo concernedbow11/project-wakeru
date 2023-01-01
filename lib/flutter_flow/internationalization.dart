@@ -650,12 +650,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': '',
       'es': '',
     },
-    '8u5uxesq': {
-      'en': 'Sainsbury\'s',
-      'ar': '',
-      'de': '',
-      'es': '',
-    },
     '0hjenvaq': {
       'en': 'Payment',
       'ar': 'دخل',
@@ -694,12 +688,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ij9c4r7d': {
       'en': 'Contactless',
-      'ar': '',
-      'de': '',
-      'es': '',
-    },
-    '46ke1uem': {
-      'en': 'Amazon',
       'ar': '',
       'de': '',
       'es': '',
@@ -821,12 +809,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Hallo Welt',
       'es': 'Hola Mundo',
     },
-    '2thn73jc': {
-      'en': 'Sainsbury\'s',
-      'ar': 'احصل على مكافآت بعيدة',
-      'de': 'Go-Far-Prämien',
-      'es': 'Recompensas Ve Lejos',
-    },
     '1fjdiibo': {
       'en': 'Payment',
       'ar': 'دخل',
@@ -868,12 +850,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'مرحبا بالعالم',
       'de': 'Hallo Welt',
       'es': 'Hola Mundo',
-    },
-    '8pdmehj2': {
-      'en': 'Amazon',
-      'ar': 'احصل على مكافآت بعيدة',
-      'de': 'Go-Far-Prämien',
-      'es': 'Recompensas Ve Lejos',
     },
     'krrhjgc4': {
       'en': 'Payment',
@@ -1317,7 +1293,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': '\$ Betrag',
       'es': '\$ Monto',
     },
-    'pf56ghbm': {
+    'kss3mp4o': {
       'en': '£7,630',
       'ar': '',
       'de': '',
@@ -1341,7 +1317,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Heim',
       'es': 'Casa',
     },
-    'a73inb01': {
+    '2m9cn5ie': {
       'en': 'Please authenticate before sending payment',
       'ar': '',
       'de': '',

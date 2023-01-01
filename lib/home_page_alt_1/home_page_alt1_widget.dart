@@ -3,6 +3,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../rewards/rewards_widget.dart';
 import '../transfer_funds/transfer_funds_widget.dart';
+import '../flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -603,9 +604,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '2thn73jc' /* Sainsbury's */,
-                                        ),
+                                        random_data.randomName(true, false),
                                         style:
                                             FlutterFlowTheme.of(context).title3,
                                       ),
@@ -823,9 +822,7 @@ class _HomePageAlt1WidgetState extends State<HomePageAlt1Widget>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '8pdmehj2' /* Amazon */,
-                                        ),
+                                        random_data.randomName(true, false),
                                         style:
                                             FlutterFlowTheme.of(context).title3,
                                       ),

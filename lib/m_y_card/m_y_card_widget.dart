@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../payment_details/payment_details_widget.dart';
 import '../transfer_funds/transfer_funds_widget.dart';
+import '../flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -778,10 +779,8 @@ class _MYCardWidgetState extends State<MYCardWidget>
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '8u5uxesq' /* Sainsbury's */,
-                                              ),
+                                              random_data.randomName(
+                                                  true, true),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .subtitle1
@@ -1054,10 +1053,8 @@ class _MYCardWidgetState extends State<MYCardWidget>
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '46ke1uem' /* Amazon */,
-                                              ),
+                                              random_data.randomName(
+                                                  true, false),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .subtitle1
