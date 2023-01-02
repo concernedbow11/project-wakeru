@@ -26,6 +26,6 @@ export 'notifications_settings/notifications_settings_widget.dart'
 export 'tutorial_p_r_o_f_i_l_e/tutorial_p_r_o_f_i_l_e_widget.dart'
     show TutorialPROFILEWidget;
 export 'privacy_policy/privacy_policy_widget.dart' show PrivacyPolicyWidget;
+export 'rewards/rewards_widget.dart' show RewardsWidget;
 export 'budget_d_e_l_e_t_e/budget_d_e_l_e_t_e_widget.dart'
     show BudgetDELETEWidget;
-export 'rewards/rewards_widget.dart' show RewardsWidget;
