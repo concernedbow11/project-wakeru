@@ -1293,7 +1293,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': '\$ Betrag',
       'es': '\$ Monto',
     },
-    'b96e056y': {
+    '92tyh0qp': {
       'en': '£7,630',
       'ar': '',
       'de': '',
@@ -1317,7 +1317,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Heim',
       'es': 'Casa',
     },
-    'xn98j568': {
+    'lxmv215g': {
       'en': 'Please authenticate before sending payment',
       'ar': '',
       'de': '',
@@ -1396,7 +1396,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Tu nombre',
     },
     'dw9gmjdc': {
-      'en': 'Please enter a valid number...',
+      'en': 'Please enter your name...',
       'ar': 'من فضلك أدخل رقما صالحا...',
       'de': 'Bitte geben Sie eine gültige Nummer ein...',
       'es': 'Por favor ingrese un número valido...',
@@ -1653,42 +1653,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Casa',
     },
   },
-  // budget_DELETE
-  {
-    'pozov0xz': {
-      'en': 'Delete Budget',
-      'ar': 'حذف الميزانية',
-      'de': 'Budget löschen',
-      'es': 'Eliminar presupuesto',
-    },
-    'aptjmof0': {
-      'en':
-          'If you delete this budget, your transactions will no longer be associated with it.',
-      'ar': 'إذا حذفت هذه الميزانية ، فلن تكون معاملاتك مرتبطة بها بعد الآن.',
-      'de':
-          'Wenn Sie dieses Budget löschen, sind Ihre Transaktionen nicht mehr damit verknüpft.',
-      'es':
-          'Si elimina este presupuesto, sus transacciones ya no estarán asociadas a él.',
-    },
-    '9l7pbjcj': {
-      'en': 'Delete Budget',
-      'ar': 'حذف الميزانية',
-      'de': 'Budget löschen',
-      'es': 'Eliminar presupuesto',
-    },
-    'u0kr38at': {
-      'en': 'Tap above to remove this bude',
-      'ar': 'انقر فوق لإزالة هذا bude',
-      'de': 'Tippen Sie oben, um diese Bude zu entfernen',
-      'es': 'Toque arriba para eliminar este bude',
-    },
-    'b1xp801p': {
-      'en': 'Home',
-      'ar': 'مسكن',
-      'de': 'Heim',
-      'es': 'Casa',
-    },
-  },
   // rewards
   {
     'hhb6veym': {
@@ -1758,6 +1722,42 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
     'vox9t1s0': {
+      'en': 'Home',
+      'ar': 'مسكن',
+      'de': 'Heim',
+      'es': 'Casa',
+    },
+  },
+  // budget_DELETE
+  {
+    'pozov0xz': {
+      'en': 'Delete Budget',
+      'ar': 'حذف الميزانية',
+      'de': 'Budget löschen',
+      'es': 'Eliminar presupuesto',
+    },
+    'aptjmof0': {
+      'en':
+          'If you delete this budget, your transactions will no longer be associated with it.',
+      'ar': 'إذا حذفت هذه الميزانية ، فلن تكون معاملاتك مرتبطة بها بعد الآن.',
+      'de':
+          'Wenn Sie dieses Budget löschen, sind Ihre Transaktionen nicht mehr damit verknüpft.',
+      'es':
+          'Si elimina este presupuesto, sus transacciones ya no estarán asociadas a él.',
+    },
+    '9l7pbjcj': {
+      'en': 'Delete Budget',
+      'ar': 'حذف الميزانية',
+      'de': 'Budget löschen',
+      'es': 'Eliminar presupuesto',
+    },
+    'u0kr38at': {
+      'en': 'Tap above to remove this bude',
+      'ar': 'انقر فوق لإزالة هذا bude',
+      'de': 'Tippen Sie oben, um diese Bude zu entfernen',
+      'es': 'Toque arriba para eliminar este bude',
+    },
+    'b1xp801p': {
       'en': 'Home',
       'ar': 'مسكن',
       'de': 'Heim',

@@ -1,5 +1,3 @@
-import '../auth/auth_util.dart';
-import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -44,63 +42,44 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
         centerTitle: false,
         elevation: 0,
       ),
-      body: StreamBuilder<UsersRecord>(
-        stream: UsersRecord.getDocument(currentUserReference!),
-        builder: (context, snapshot) {
-          // Customize what your widget looks like when it's loading.
-          if (!snapshot.hasData) {
-            return Center(
-              child: SizedBox(
-                width: 40,
-                height: 40,
-                child: SpinKitDoubleBounce(
-                  color: FlutterFlowTheme.of(context).primaryColor,
-                  size: 40,
-                ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Expanded(
+                    child: Text(
+                      FFLocalizations.of(context).getText(
+                        'fvsfg5on' /* How we use your data */,
+                      ),
+                      style: FlutterFlowTheme.of(context).title1,
+                    ),
+                  ),
+                ],
               ),
-            );
-          }
-          final columnUsersRecord = snapshot.data!;
-          return SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'fvsfg5on' /* How we use your data */,
-                          ),
-                          style: FlutterFlowTheme.of(context).title1,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 12, 20, 44),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'nbiyrnzl' /* Lorem ipsum dolor sit amet, co... */,
-                          ),
-                          style: FlutterFlowTheme.of(context).bodyText2,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
             ),
-          );
-        },
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 12, 20, 44),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Expanded(
+                    child: Text(
+                      FFLocalizations.of(context).getText(
+                        'nbiyrnzl' /* Lorem ipsum dolor sit amet, co... */,
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyText2,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
