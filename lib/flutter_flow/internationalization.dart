@@ -467,12 +467,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': '',
       'es': '',
     },
-    'sms9s60f': {
-      'en': 'Welcome, User',
-      'ar': '',
-      'de': '',
-      'es': '',
-    },
     'xisotr20': {
       'en': 'money left to spend',
       'ar': '',

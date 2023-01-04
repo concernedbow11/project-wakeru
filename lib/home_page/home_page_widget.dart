@@ -197,17 +197,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(-0.76, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'sms9s60f' /* Welcome, User */,
-                                    ),
-                                    textAlign: TextAlign.start,
-                                    style:
-                                        FlutterFlowTheme.of(context).subtitle1,
-                                  ),
-                                ),
-                                Align(
                                   alignment: AlignmentDirectional(-0.35, -0.7),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
